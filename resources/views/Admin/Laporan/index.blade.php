@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.sbdadmin')
 
 @section('title', 'Halaman Laporan')
 
@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" name="to" class="form-control" placeholder="Tanggal Awal"
+                            <input type="text" name="to" class="form-control" placeholder="Tanggal Akhir"
                               onfocusin="(this.type='date')" onfocusout="(this.type='text')">
                         </div>
                         <button type="submit" class="btn btn-purple" style="widht: 100%">Cari Laporan></button>

@@ -14,7 +14,10 @@ class AdminController extends Controller
  {
     return view('Admin.login');
  }
-
+ public function index()
+{
+    return view('layouts.sbdadmin');
+}
  public function login(Request $request)
  {
     //untuk mengecek username petugas

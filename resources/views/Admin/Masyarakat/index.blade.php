@@ -1,17 +1,19 @@
-@extends('layouts.admin')
+@extends('layouts.sbdadmin')
 
 @section('title', 'Halaman Masyarakat')
-
-@section('css')
-
-<link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-@endsection
 
 @section('header', 'Data Masyarakat')
 
 @section('content')
-
-    <table id="masyarakatTable" class="table">
+ <!-- DataTales Example -->
+ <div class="container-fluid">
+ <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Data Masyarakat</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th>No</th>
@@ -41,7 +43,7 @@
 @endsection
 
 @section('js')
-<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#masyarakatTable').DataTable();

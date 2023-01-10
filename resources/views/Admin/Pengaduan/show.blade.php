@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.sbdadmin')
 
 @section('title', 'Detail Pengaduan')
 
@@ -43,6 +43,16 @@
                 <div class="card-body">
                     <table class="table">
                         <tbody>
+                        <tr>
+                                <th>ID</th>
+                                <td>:</td>
+                                <td>{{ $pengaduan->id_pengaduan }}</td>
+                            </tr>
+                            <tr>
+                                <th>Tanggal Pengaduan</th>
+                                <td>:</td>
+                                <td>{{ $pengaduan->tgl_pengaduan }}</td>
+                            </tr>
                             <tr>
                                 <th>Nik</th>
                                 <td>:</td>

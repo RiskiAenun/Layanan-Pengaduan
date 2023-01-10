@@ -33,7 +33,7 @@ class TanggapanController extends Controller
         $pengaduan->update(['status' => $request->status]);
 
         $tanggapan = Tanggapan::create([
-           // 'id_pengaduan' => $request->id_pengaduan,
+            'id_pengaduan' => $request->id_pengaduan,
             'tgl_tanggapan' => date('Y-m-d'),
             'tanggapan' => $request->tanggapan,
             'id_petugas' => Auth::guard('admin')-> user()->id_petugas,

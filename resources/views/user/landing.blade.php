@@ -52,10 +52,10 @@
         <p class="italic text-white mb-5">Sampaikan laporan Anda langsung kepada yang pemerintah berwenang</p>
     </div>
 
-    <div class="wave wave1"></div>
+    {{-- <div class="wave wave1"></div>
     <div class="wave wave2"></div>
     <div class="wave wave3"></div>
-    <div class="wave wave4"></div>
+    <div class="wave wave4"></div> --}}
 </section>
 {{-- Section Card Pengaduan --}}
 <div class="row justify-content-center">
@@ -79,7 +79,21 @@
                     <textarea name="isi_laporan" placeholder="Masukkan Isi Laporan" class="form-control"
                         rows="4">{{ old('isi_laporan') }}</textarea>
                 </div>
+
                 <div class="form-group">
+                    <select class="form-control" required name='kategori'>
+                        <option value="">Pilih</option>
+                        <option value="ba">Bencana Alam</option>
+                        <option value="perjudian">Perjudian</option>
+                        <option value="kegaduhan">Kegaduhan</option>
+                        <option value="tp">Tindak Pidana</option>
+                        <option value="lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-user" name="lokasi" placeholder="Masukan Lokasi Kejadin">
+                </div>
+                    <div class="form-group">
                     <input type="file" name="foto" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-custom mt-2">Kirim</button>
@@ -114,13 +128,13 @@
                     @csrf
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" name="username" id="username" class="form-control">
+                        <input type="text" name="username" id="username" class="form-control form-control-user">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="form-control">
+                        <input type="password" name="password" id="password" class="form-control form-control-user">
                     </div>
-                    <button type="submit" class="btn btn-purple text-white mt-3" style="width: 100%">MASUK</button>
+                    <button type="submit" class="btn btn-primary btn-user btn-block" style="width: 100%">Login</button>
                 </form>
                 @if (Session::has('pesan'))
                 <div class="alert alert-danger mt-2">

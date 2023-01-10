@@ -20,6 +20,7 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
+        
         $username = Masyarakat::where('username', $request->username)->first();
 
         if (!$username) {
@@ -94,6 +95,8 @@ class UserController extends Controller
 
         $validate = Validator::make($data, [
             'isi_laporan' => ['required'],
+            'kategori'    => ['required'],
+            'lokasi'      => ['required']
         ]);
 
         if ($validate->fails()) {
@@ -112,6 +115,8 @@ class UserController extends Controller
             'isi_laporan' => $data['isi_laporan'],
             'foto' => $data['foto'] ?? '',
             'status' => '0',
+            'kategori' => $data['kategori'],
+            'lokasi' => $data['lokasi'],
         ]);
 
         if ($pengaduan) {

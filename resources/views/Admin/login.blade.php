@@ -1,48 +1,89 @@
-@extends('layouts.user')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('css')
-<style>
-    body {
-        background: #6a70fc;
-    }
+<head>
 
-    .btn-purple {
-        background: #6a70fc;
-        width: 100%;
-        color: #fff;
-    }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-</style>
-@endsection
+    <title>Login Admin</title>
 
-@section('title', 'Halaman Daftar')
+    <!-- Custom fonts for this template-->
+    <link href="{{asset('sbdadmin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-5">
-            <h2 class="text-center text-white mb-0 mt-5">PEKAT</h2>
-            <P class="text-center text-white mb-5">Pengaduan Masyarakat</P>
-            <div class="card mt-5">
-                <div class="card-body">
-                    <h2 class="text-center mb-5">FORM PETUGAS</h2>
-                    <form action="{{ route('admin.login') }}" method="POST">
-                        @csrf
-                        <div class="form-group">
-                            <input type="text" name="username" placeholder="Username" class="form-control">
+    <!-- Custom styles for this template-->
+    <link href="{{asset('sbdadmin/css/sb-admin-2.min.css')}}" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-5 col-lg-10 col-md-5">
+
+                <div class="card o-hidden border-0 shadow-lg my-4">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            
+                             <div class="col-lg-9">
+                                <div class="p-4"> 
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4"><img src="{{ asset('images/logo.png') }}" width="200" ></h1>
+                                    </div>
+                                    @if (Session::has('pesan'))
+                                    <div class="alert alert-danger mt-2">
+                                        {{ Session::get('pesan') }}
+                                    </div>
+                                    @endif
+                                    <form action="{{ route('admin.login') }}" method="POST">
+                                        @csrf
+                                        <div class="form-group">
+                                            <input type="text" name="username" class="form-control form-control-user"placeholder="Enter Username...">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="password" class="form-control form-control-user" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="custom-control custom-checkbox small">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <label class="custom-control-label" for="customCheck">Remember
+                                                    Me</label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                        
+                                    <div class="text-center">
+                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="password" name="password" placeholder="Password" class="form-control">
-                        </div>
-                        
-                        <button type="submit" class="btn btn-purple">LOGIN</button>
-                    </form>
+                    </div>
                 </div>
+
             </div>
-           
-            
-            <a href="{{ route('admin.login') }}" class="btn btn-warning text-white mt-3" style="width: 100%">Kembali ke Halaman Utama</a>
+
         </div>
+
     </div>
-</div>
-@endsection
+
+   
+
+</body>
+
+</html>
+
+
+

@@ -32,6 +32,7 @@ Route::post('/login/auth', [UserController::class, 'login'])->name('pekat.login'
     Route::get('/laporan/{siapa?}', [UserController::class, 'laporan'])->name('pekat.laporan');
 
     Route::get('/logout', [UserController::class, 'logout'])->name('pekat.logout');
+    // Route::get('/sbd', [AdminController::class, 'index'])->name('pekat.index');
 
 Route::prefix('admin')->group(function (){
 

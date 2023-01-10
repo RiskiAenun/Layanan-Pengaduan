@@ -14,11 +14,15 @@ class pengaduan extends Model
     protected $primaryKey = 'id_pengaduan';
 
     protected $fillable =[
+        'id_pengaduan',
         'tgl_pengaduan',
         'nik',
         'isi_laporan',
         'foto',
+        'kategori',
+        'lokasi',
         'status',
+
     ];
 
     protected $dates = ['tgl_pengaduan'];
