@@ -21,6 +21,12 @@ class DashboardController extends Controller
 
         $petugas = Petugas::all()->count();
 
-        return view('Dashboard.index', ['petugas' => $petugas, 'masyarakat' => $masyarakat, 'proses' => $proses, 'selesai' => $selesai]);
+        $countBencanaAlam = Pengaduan::where('kategori','ba')->count();
+        $countPerjudian = Pengaduan::where('kategori','perjudian')->count();
+        $countKegaduhan = Pengaduan::where('kategori','kegaduah')->count();
+        $countTindakPidana = Pengaduan::where('kategori','tp')->count();
+        $countLainya = Pengaduan::where('kategori','lainnya')->count();
+
+        return view('Dashboard.index', compact('petugas','masyarakat','proses','selesai','petugas','countBencanaAlam','countPerjudian','countKegaduhan','countTindakPidana','countLainya'));
     }
 }

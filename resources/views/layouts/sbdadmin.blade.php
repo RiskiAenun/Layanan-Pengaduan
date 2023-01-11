@@ -121,11 +121,7 @@
     <script src="{{asset('sbdadmin/vendor/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('sbdadmin/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
-    <script src="{{asset('sbdadmin/vendor/chart.js/Chart.min.js')}}"></script>
-
     <!-- Page level custom scripts -->
-    <script src="{{asset('sbdadmin/js/demo/chart-area-demo.js')}}"></script>
-    <script src="{{asset('sbdadmin/js/demo/datatables-demo.js')}}"></script>
     @yield('js')
 </body>
 
