@@ -1,29 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.sbdadmin')
 
-@section('title', 'Form Tambah Petugas')
-
-@section('css')
-    <style>
-        .text-primary:hover{
-            text-decoration: underline;
-        }
-
-        .text.grey {
-            color: #6c757d;
-        }
-
-        .text.grey:hover {
-            color: #6c757d;
-        }
-
-
-    </style>
-@endsection
-@section('header')
-        <a href="{{ route('petugas.index') }}" class="text-primary">Data Pengaduan</a>
-        <a href="#" class="text-grey">/</a>
-        <a href="#" class="text-grey">Form Edit Petugas</a>
-@endsection
+@section('title', 'Form Edit')
 
 @section('content')
     <div class="row">
@@ -38,22 +15,22 @@
                     @method('PATCH')
                     <div class="form-group">
                         <label for="nama_petugas">Nama Petugas</label>
-                        <input type="text" value="{{ $petugas->nama_petugas }}" name="nama_petugas" id="nama_petugas" class="form-control" required>
+                        <input type="text" value="{{ $petugas->nama_petugas }}" name="nama_petugas" id="nama_petugas" class="form-control form-control-user" required>
             </div>    
                
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input type="text" value="{{ $petugas->username }}" name="username" id="username" class="form-control" required>
+                        <input type="text" value="{{ $petugas->username }}" name="username" id="username" class="form-control form-control-user" required>
             </div>  
            
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" value="{{ $petugas->password }}" name="password" id="password" class="form-control" required>
+                        <input type="password" value="{{ $petugas->password }}" name="password" id="password" class="form-control form-control-user" required>
             </div>    
             
                     <div class="form-group">
                         <label for="tlp">No Telepon</label>
-                        <input type="number" value="{{ $petugas->tlp }}" name="tlp" id="tlp" class="form-control" required>
+                        <input type="number" value="{{ $petugas->tlp }}" name="tlp" id="tlp" class="form-control form-control-user" required>
             </div>    
             
                     <div class="form-group">

@@ -22,27 +22,32 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('pengaduan.index') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-bullhorn"></i>
             <span>Pengaduan</span></a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('petugas.index') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-address-card"></i>
             <span>Petugas</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('masyarakat.index') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="far fa-address-card"></i>
             <span>Masyarakat</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('laporan.index') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-tasks"></i>
             <span>Laporan</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.formLogin') }}">
+            <i class="fas fa-angle-left"></i>
+            <span>Logout</span></a>
+    </li>
    
 
     <!-- Divider -->

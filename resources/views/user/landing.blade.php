@@ -13,8 +13,7 @@
         <div class="container">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <h4 class="semi-bold mb-0 text-white">PEKAT</h4>
-                    <p class="italic mt-0 text-white">Pengaduan Masyarakat</p>
+                    <h4 class="semi-bold mb-0 text-white"><img src="{{ asset('images/logo.png') }}" width="250"></h4>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,21 +45,18 @@
             </div>
         </div>
     </nav>
-
-    <div class="text-center">
-        <h2 class="medium text-white mt-3">Layanan Pengaduan Masyarakat</h2>
-        <p class="italic text-white mb-5">Sampaikan laporan Anda langsung kepada yang pemerintah berwenang</p>
-    </div>
-
-    {{-- <div class="wave wave1"></div>
-    <div class="wave wave2"></div>
-    <div class="wave wave3"></div>
-    <div class="wave wave4"></div> --}}
 </section>
-{{-- Section Card Pengaduan --}}
-<div class="row justify-content-center">
-    <div class="col-lg-6 col-10 col">
-        <div class="content shadow">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-6 d-none d-lg-block "><img src="{{ asset('images/home.png') }}" width="500"></div>
+                    <div class="col-lg-5">
+                        <div class="p-8">
+                            <div class="text-center">
+                                <br><h1 class="h4 text-gray-900 mb-4">Tuliskan Aduan Anda Disni</h1></br>
+                            </div>
 
             @if ($errors->any())
                 @foreach ($errors->all() as $error)
@@ -72,16 +68,15 @@
                 <div class="alert alert-{{ Session::get('type') }}">{{ Session::get('pengaduan') }}</div>
             @endif
 
-            <div class="card mb-3">Tulis Laporan Disini</div>
             <form action="{{ route('pekat.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
-                    <textarea name="isi_laporan" placeholder="Masukkan Isi Laporan" class="form-control"
+                    <textarea name="isi_laporan" placeholder="Masukkan Isi Laporan" class="form-control form-control-user"
                         rows="4">{{ old('isi_laporan') }}</textarea>
                 </div>
 
                 <div class="form-group">
-                    <select class="form-control" required name='kategori'>
+                    <select class="form-control form-control-user" required name='kategori'>
                         <option value="">Pilih</option>
                         <option value="ba">Bencana Alam</option>
                         <option value="perjudian">Perjudian</option>
@@ -91,17 +86,19 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control form-control-user" name="lokasi" placeholder="Masukan Lokasi Kejadin">
+                    <input type="text" class="form-control form-control-user" name="lokasi" placeholder="Masukan Lokasi Kejadian">
                 </div>
-                    <div class="form-group">
-                    <input type="file" name="foto" class="form-control">
+                    <input type="file" name="foto" >
                 </div>
-                <button type="submit" class="btn btn-custom mt-2">Kirim</button>
+            </br>
+                <div>
+                <button type="submit" class="btn btn-primary btn-user btn-block">Kirim</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
-{{-- Section Hitung Pengaduan --}}
+{{-- Section Hitung Pengaduan
 <div class="pengaduan mt-5">
     <div class="bg-purple">
         <div class="text-center">
@@ -109,7 +106,7 @@
             <h2 class="medium text-white">10</h2>
         </div>
     </div>
-</div>
+</div> --}}
 {{-- Footer --}}
 <div class="mt-5">
     <hr>

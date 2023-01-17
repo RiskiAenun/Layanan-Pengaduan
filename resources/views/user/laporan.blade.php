@@ -70,9 +70,23 @@
                             rows="4">{{ old('isi_laporan') }}</textarea>
                     </div>
                     <div class="form-group">
-                        <input type="file" name="foto" class="form-control">
+                        <select class="form-control form-control-user" required name='kategori'>
+                            <option value="">Pilih</option>
+                            <option value="ba">Bencana Alam</option>
+                            <option value="perjudian">Perjudian</option>
+                            <option value="kegaduhan">Kegaduhan</option>
+                            <option value="tp">Tindak Pidana</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
                     </div>
-                    <button type="submit" class="btn btn-custom mt-2">Kirim</button>
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-user" name="lokasi" placeholder="Masukan Lokasi Kejadian">
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name="foto"> 
+                    </div>
+                </br>
+                    <button type="submit" class="btn btn-primary btn-user btn-block">Kirim</button>
                 </form>
             </div>
         </div>
@@ -163,7 +177,7 @@
 <div class="mt-5">
     <hr>
     <div class="text-center">
-        <p class="italic text-secondary">© 2021 Ihsanfrr • All rights reserved</p>
+        <p class="italic text-secondary">© 2022/p>
     </div>
 </div>
 @endsection
