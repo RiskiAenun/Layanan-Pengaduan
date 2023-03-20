@@ -1,35 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.sbdadmin')
 
-@section('title', 'Detail Masyarakat')
-
-@section('css')
-    <style>
-          .text-primary:hover{
-            text-decoration: underline;
-        }
-
-        .text.grey {
-            color: #6c757d;
-        }
-
-        .text.grey:hover {
-            color: #6c757d;
-        }
-
-        .btn-purple{
-            background: #6a70fc;
-            border: 1px solid #6a70fc;
-            color: #fff;
-            width: 100%
-        }
-    </style>
-@endsection
-
-@section('header')
-        <a href="{{ route('masyarakat.index') }}" class="text-primary">Data Masyarakat</a>
-        <a href="#" class="text-grey">/</a>
-        <a href="#" class="text-grey">Detail Masyarakat</a>
-@endsection
+@section('title', 'Halaman Masyarakat')
 
 @section('content')
 <div  class="row"> 
@@ -63,4 +34,15 @@
                                 <td>:</td>
                                 <td>{{ $masyarakat->telp }}</td>
                             </tr>
+                        </tbody>
+                    </table>
+                    <form action = "{{ route('masyarakat.destroy', $masyarakat->nik) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger mt-2" style="width: 100%">HAPUS</button>
+             </form> 
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

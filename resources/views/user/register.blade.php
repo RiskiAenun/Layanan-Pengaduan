@@ -45,19 +45,19 @@
                     <form action="{{ route('pekat.register') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <input type="number" class="form-control form-control-user" name="nik" placeholder="NIK" class="form-control">
+                            <input type="number" class="form-control form-control-user" name="nik" placeholder="NIK">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-user" name="nama" placeholder="Nama Lengkap" class="form-control">
+                            <input type="text" class="form-control form-control-user" name="nama" placeholder="Nama Lengkap" >
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-user" name="username" placeholder="Username" class="form-control">
+                            <input type="text" class="form-control form-control-user" name="username" placeholder="Username">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control form-control-user" name="password" placeholder="Password" class="form-control">
+                            <input type="password" class="form-control form-control-user" name="password" placeholder="Password">
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control form-control-user" name="telp" placeholder="No. Telp" class="form-control">
+                            <input type="number" class="form-control form-control-user" name="telp" placeholder="No. Telp">
                         </div>
                         <button type="submit" class="btn btn-primary btn-user btn-block">REGISTER</button>
                     </form>

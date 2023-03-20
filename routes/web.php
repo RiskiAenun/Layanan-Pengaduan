@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [UserController::class, 'index'])->name('pekat.index');
 
 Route::post('/login/auth', [UserController::class, 'login'])->name('pekat.login');
-
+Route::post('/logout/auth', [UserController::class, 'logout'])->name('pekat.logout');
     //REgister
     Route::get('/register', [UserController::class, 'formRegister'])->name('pekat.formRegister');
     Route::post('/register/auth', [UserController::class, 'register'])->name('pekat.register');

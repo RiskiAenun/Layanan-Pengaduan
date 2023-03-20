@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/landing.css') }}">
 @endsection
 
-@section('title', 'PEKAT - Pengaduan Masyarakat')
+@section('title', 'Pengaduan Masyarakat')
 
 @section('content')
 {{-- Section Header --}}
@@ -98,20 +98,12 @@
         </div>
     </div>
 </div>
-{{-- Section Hitung Pengaduan
-<div class="pengaduan mt-5">
-    <div class="bg-purple">
-        <div class="text-center">
-            <h5 class="medium text-white mt-3">JUMLAH LAPORAN SEKARANG</h5>
-            <h2 class="medium text-white">10</h2>
-        </div>
-    </div>
-</div> --}}
+
 {{-- Footer --}}
 <div class="mt-5">
     <hr>
     <div class="text-center">
-        <p class="italic text-secondary">© 2022 </p>
+        <p class="italic text-secondary">Copyright &copy; 2022 </p>
     </div>
 </div>
 {{-- Modal --}}

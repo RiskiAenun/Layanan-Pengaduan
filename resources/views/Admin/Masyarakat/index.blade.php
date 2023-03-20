@@ -13,7 +13,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-bordered" id="masyarakatTable" width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th>No</th>
@@ -21,8 +21,9 @@
                 <th>Nama</th>
                 <th>Username</th>
                  <th>Telepon</th>
+                 @if ( auth()->guard('admin')->user()->level == "admin")
                 <th>Detail</th>
-               
+                @endif
                 
             </tr>
             </thead>
@@ -34,8 +35,9 @@
                 <td>{{ $v->nama }}</td>
                 <td>{{ $v->username }}</td>
                 <td>{{ $v->telp }}</td>
+                @if ( auth()->guard('admin')->user()->level == "admin")
                 <td><a href="{{ route('masyarakat.show', $v->nik) }}" style="text-decoration:underline">Lihat</a></td>
-                
+                @endif
             </tr>
             @endforeach
         </tbody>

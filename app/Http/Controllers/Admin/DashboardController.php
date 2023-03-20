@@ -16,6 +16,7 @@ class DashboardController extends Controller
 
         $masyarakat = Masyarakat::all()->count();
 
+        $pending = Pengaduan::where('status', '0')->get()->count();
         $proses = Pengaduan::where('status', 'proses')->get()->count();
         $selesai = Pengaduan::where('status', 'selesai')->get()->count();
 

@@ -25,7 +25,7 @@
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody>
+            
             @foreach ($pengaduan as $k => $v)
                 <tr>
                     <td>{{ $k += 1 }} </td>

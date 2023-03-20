@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{{ asset('images/icons.png') }}">
-    <title>Sipemas</title>
+    <title>Pengaduan Masyarakat</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('sbdadmin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -65,7 +65,6 @@
                 <!-- /.container-fluid -->
                
             </div>
-            <!-- End of Main Content -->
 
             <!-- Footer -->
             @include('layouts.component.footer')
@@ -113,8 +112,6 @@
     <!-- Core plugin JavaScript-->
     <script src="{{asset('sbdadmin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
     
-    <!-- Custom scripts for all pages-->
-    <script src="{{asset('sbdadmin/js/sb-admin-2.min.js')}}"></script>
     <!-- Custom scripts for all pages-->
     <script src="{{asset('sbdadmin/js/sb-admin-2.min.js')}}"></script>
 

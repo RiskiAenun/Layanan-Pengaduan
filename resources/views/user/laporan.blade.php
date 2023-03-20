@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/laporan.css') }}">
 @endsection
 
-@section('title', 'PEKAT - Pengaduan Masyarakat')
+@section('title', 'Pengaduan Masyarakat')
 
 @section('content')
 {{-- Section Header --}}
@@ -14,15 +14,16 @@
         <div class="container">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ route('pekat.index') }}">
-                    <h4 class="semi-bold mb-0 text-white">PEKAT</h4>
-                    <p class="italic mt-0 text-white">Pengaduan Masyarakat</p>
+            <div>
+            <img src="{{ asset('images/logo.png') }}" width="200" >
+             </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    @if(Auth::guard('masyarakat')->check())
+                    
                     <ul class="navbar-nav text-center ml-auto">
                         <li class="nav-item">
                             <a class="nav-link ml-3 text-white" href="{{ route('pekat.laporan') }}">Laporan</a>
@@ -32,17 +33,7 @@
                                 style="text-decoration: underline">{{ Auth::guard('masyarakat')->user()->nama }}</a>
                         </li>
                     </ul>
-                    @else
-                    <ul class="navbar-nav text-center ml-auto">
-                        <li class="nav-item">
-                            <button class="btn text-white" type="button" class="btn btn-primary" data-toggle="modal"
-                                data-target="#loginModal">Masuk</button>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('pekat.formRegister') }}" class="btn btn-outline-purple">Daftar</a>
-                        </li>
-                    </ul>
-                    @endauth
+                   
                 </div>
             </div>
         </div>
@@ -177,7 +168,7 @@
 <div class="mt-5">
     <hr>
     <div class="text-center">
-        <p class="italic text-secondary">© 2022/p>
+        <p class="italic text-secondary">© 2022
     </div>
 </div>
 @endsection

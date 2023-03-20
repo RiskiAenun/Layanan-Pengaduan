@@ -3,16 +3,15 @@
 @section('header', 'Data Petugas')
 
 @section('content')
-        <a href="{{ route('petugas.create') }}"class="btn btn-success btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-plus"></i>
-                                        </span>
-                                        <span class="text">Tambah Data</span>
-        </a>
+        
     <div class="container-fluid">
         <div class="card shadow mb-4">
            <div class="card-header py-3">
-               <h6 class="m-0 font-weight-bold text-primary">Data Petugas</h6>
+               
+        <a href="{{ route('petugas.create') }}"class="btn btn-success btn-icon-split">
+                <span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+                <span class="text">Tambah Data Data Petugas</span>
+        </a>
            </div>
            <div class="card-body">
                <div class="table-responsive">

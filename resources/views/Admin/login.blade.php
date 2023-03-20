@@ -50,15 +50,10 @@
                                             <input type="password" name="password" class="form-control form-control-user" placeholder="Password">
                                         </div>
                                         <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
+                                              <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
-                                        
-                                   
+                                        </div>
+                                      
                                     
                                 </div>
                             </div>

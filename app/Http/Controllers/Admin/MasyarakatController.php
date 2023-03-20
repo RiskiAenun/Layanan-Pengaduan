@@ -22,4 +22,13 @@ class MasyarakatController extends Controller
 
       return view('Admin.Masyarakat.show', ['masyarakat' => $masyarakat]);
     }
+
+    public function destroy($nik)
+    {
+        $masyarakat = Masyarakat::findOrFail($nik);
+
+        $masyarakat->delete();
+        
+        return redirect()->route('masyarakat.index');
+    }
 }

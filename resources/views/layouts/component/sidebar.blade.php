@@ -25,11 +25,14 @@
             <i class="fas fa-bullhorn"></i>
             <span>Pengaduan</span></a>
     </li>
+
+    @if ( auth()->guard('admin')->user()->level == "admin")
     <li class="nav-item">
         <a class="nav-link" href="{{ route('petugas.index') }}">
             <i class="fas fa-address-card"></i>
             <span>Petugas</span></a>
     </li>
+    @endif
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('masyarakat.index') }}">

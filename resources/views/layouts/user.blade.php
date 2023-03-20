@@ -9,7 +9,7 @@
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     @yield('css')
-
+    <link rel="icon" href="{{ asset('images/icons.png') }}">
     <title>@yield('title')</title>
 </head>
 
