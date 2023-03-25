@@ -74,6 +74,7 @@
                         <input type="text" class="form-control form-control-user" name="lokasi" placeholder="Masukan Lokasi Kejadian">
                     </div>
                     <div class="form-group">
+                        <label>Unggah Foto Pendukung</label><br>
                         <input type="file" name="foto"> 
                     </div>
                 </br>

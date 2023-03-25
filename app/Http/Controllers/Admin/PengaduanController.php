@@ -10,7 +10,7 @@ class PengaduanController extends Controller
 {
     public function index()
     {
-        $pengaduan = Pengaduan::with('user')->orderBy('tgl_pengaduan', 'desc')->get();
+        $pengaduan = Pengaduan::has('user')->with('user')->orderBy('tgl_pengaduan', 'desc')->get();
 
         return view('Admin.Pengaduan.index', ['pengaduan' => $pengaduan]);
     }
